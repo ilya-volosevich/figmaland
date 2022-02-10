@@ -1,0 +1,67 @@
+@mixin headline {
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin secondheadline {
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0.1px;
+    color: #C4C4C4;
+}
+
+@mixin subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #C4C4C4;
+}
+
+@mixin subheading {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin paragraphe {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin link {
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
+
+@mixin mobilemenu {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.2px;
+    color: #C4C4C4;
+}
