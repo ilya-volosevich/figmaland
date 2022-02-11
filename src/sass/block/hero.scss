@@ -1,0 +1,47 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+
+.hero {
+    background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+    padding-top: 192px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &-top {
+            max-width: 651px;
+            margin-bottom: 101px;       
+            .hero__top-title {
+                @include headline;
+                margin-bottom: 7px;
+
+            }
+            .hero__top-descr {
+                @include subheading;
+                margin-bottom: 61px;
+            }
+            .hero__top-buttons {
+                .hero__top-button {
+                    @include button;
+                    border: 1px solid #FFFFFF;
+                    margin-right: 13px;
+                    padding: 18px 46px;
+                    filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+                    border-radius: 39px;
+                }
+                .hero__top-button:last-child {
+                    margin-right: 0px;
+                }
+                .hero__top-button:hover {
+                    background: #FFFFFF;
+                    color: #000;
+                    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+                    border-radius: 39px;
+                }
+            }
+            
+        }
+    }
+}
