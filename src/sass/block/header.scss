@@ -1,6 +1,8 @@
 @import "./components/mixins.scss";
 @import "./components/variables.scss";
-
+.header__wrapper {
+    position: relative;
+}
 .header__content {
     display: flex;
     flex-direction: row;
