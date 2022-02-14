@@ -3,7 +3,7 @@
     font-size: 55px;
     line-height: 65px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin secondheadline {
@@ -11,7 +11,7 @@
     font-size: 46px;
     line-height: 57px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin title {
@@ -19,7 +19,7 @@
     font-weight: 500;
     line-height: 33px;
     letter-spacing: 0.1px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin subtitle {
@@ -27,14 +27,14 @@
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0.1px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin subheading {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin button {
@@ -42,26 +42,35 @@
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin paragraphe {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin link {
     font-size: 15px;
     line-height: 27px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
 }
 
 @mixin mobilemenu {
     font-size: 30px;
     line-height: 45px;
     letter-spacing: 0.2px;
-    color: #C4C4C4;
+    color: #FFFFFF;
+}
+
+@mixin regular__btn {
+    @include button;
+    border: 1px solid #FFFFFF;
+    margin-right: 40px;
+    padding: 18px 46px;
+    filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+    border-radius: 39px;
 }

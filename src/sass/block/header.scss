@@ -1,0 +1,38 @@
+@import "./components/mixins.scss";
+@import "./components/variables.scss";
+.header__wrap {
+    position: relative;
+    }
+.header__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    position: absolute;
+    width: 100%;
+    max-width: 1283px;
+    
+    .header__logo-link {
+        margin-left:40px;
+    }
+    .header__menu {
+        display: flex;
+        flex-direction: row;
+        &-item {
+            margin-right: 31px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+        &-link {
+            @include link;
+            
+        }
+    }
+    .header__btn, .regular__btn{
+        @include regular__btn
+    }
+
+}
