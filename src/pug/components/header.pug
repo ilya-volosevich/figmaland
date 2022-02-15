@@ -3,7 +3,12 @@ header.header.container
 		.header__content
 			a.header__logo-link(href="#") 
 				img.header__link-icon(src="./img/headerlogo.svg", alt="Main Logo")
-			nav.nav 
+			nav.nav
+				input(class="burger__toggle" type="checkbox" id="check-menu")
+				label(class="burger__menu" for="check-menu")
+					.burger__line
+					.burger__line
+					.burger__line
 				ul.header__menu
 					li.header__menu-item
 						a.header__menu-link(href='#') Home
