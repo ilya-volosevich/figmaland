@@ -7,7 +7,7 @@
 }
 
 @mixin secondheadline {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 46px;
     line-height: 57px;
     letter-spacing: 0.2px;
@@ -31,6 +31,7 @@
 }
 
 @mixin subheading {
+    font-weight: 700px;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.2px;
@@ -73,4 +74,5 @@
     padding: 18px 46px;
     filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
     border-radius: 39px;
+    white-space: nowrap;
 }
