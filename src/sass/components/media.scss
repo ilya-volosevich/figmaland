@@ -7,7 +7,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            position: fixed;
+            position: absolute;
             top:10px;
             left: 0px;
             z-index: 30;
@@ -81,5 +81,25 @@
                 margin-right: 16px;
             }
         }
-    }     
+    }
+    .hero {
+        &__content {
+            &-top {
+                .hero__top-title {
+                    @include secondheadline
+                }
+                .hero__top-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .hero__top-button {
+                        margin-right: 0px;
+                    }
+                    .hero__top-button:first-child {
+                        margin-bottom: 13px;
+                    }
+                }
+            }
+        }
+    }    
 }
