@@ -16,16 +16,14 @@
             margin-bottom: 90px;
         }
         &-cards {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 190px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(304px,1fr));
+            gap: 64px 31px;
             .built__card {
                 border: 1px solid #DEDEDE;
                 box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
                 border-radius: 10px;
                 padding: 40px 50px;
-                max-width: 404px;
-                margin-right: 31px;
                 transition: 1s;
                 .built__card-item {
                     display: flex;
@@ -58,9 +56,6 @@
                         transition: 0.5s;
                     }
                 }
-            }
-            .built__card:last-child {
-                margin-right: 0px;
             }
             .built__card:hover {
                 background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
