@@ -1,0 +1,85 @@
+@import "./components/mixins.scss";
+@import "./components/variables.scss";
+
+@media (max-width:800px) {
+    .header {
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: fixed;
+            top:10px;
+            left: 0px;
+            z-index: 30;
+            padding: 15px 16px 0px 15px;
+            .header__logo-link {
+                order: 1;
+                min-width: 186px;
+                margin-left: 0px;
+            }
+            .nav {
+                order: 3;
+                position: relative;
+                .burger__line:nth-child(1) {
+                    position: absolute;
+                    top:-10px;
+                    left:-35px;
+                    width: 44px;
+                    height: 5px;
+                    background: #FFFFFF;
+                }
+                .burger__line:nth-child(2) {
+                    position: absolute;
+                    top:0px;
+                    left:-35px;
+                    width: 36px;
+                    height: 5px;
+                    background: #FFFFFF;
+                }
+                .burger__line:nth-child(3) {
+                    position: absolute;
+                    top:10px;
+                    left:-35px;
+                    width: 22px;
+                    height: 5px;
+                    background: #FFFFFF;
+                }
+                ul.header__menu {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 25px;
+                    max-height: 0;
+                    font-size: 0;
+                    overflow: hidden;
+                    transition: 1s;
+                    .header__menu-item {
+                        margin-right: 0px;
+                    }
+                }
+                .burger__toggle {
+                    padding: 10px;
+                }
+                .burger__toggle:checked ~ .header__menu {
+                    position: fixed;
+                    padding: 50px;
+                    height: 100%;
+                    background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+                    width: 100%;
+                    left:0px;
+                    z-index: 1;
+                    .header__menu-item {
+                        border-bottom: 1px solid #CB1AE8;
+                    }
+                }  
+            }
+            a.header__btn.regular__btn {
+                order:2;
+                padding: 18px 29px; 
+                margin-right: 16px;
+            }
+        }
+    }     
+}
