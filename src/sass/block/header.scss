@@ -6,30 +6,44 @@
 .header__content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 30px 40px;
     position: absolute;
     width: 100%;
     max-width: 1283px;
-    
     .header__logo-link {
         margin-left:40px;
     }
-    .header__menu {
-        display: flex;
-        flex-direction: row;
-        &-item {
-            margin-right: 31px;
-            &:last-child {
-                margin-right: 0px;
+    .nav {
+        position: relative;
+        .burger__toggle {
+            display: none;
+        }
+        .burger__menu {
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 44px;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .header__menu {
+            display: flex;
+            flex-direction: row;
+            &-item {
+                margin-right: 31px;
+                &:last-child {
+                    margin-right: 0px;
+                }
             }
-        }
-        &-link {
-            @include link;
-            
-        }
+            &-link {
+                @include link;
+                
+            }
+        }   
     }
     .header__btn, .regular__btn{
         @include regular__btn
@@ -40,5 +54,4 @@
         border-radius: 39px;
         color: #000000;
     }
-
 }
