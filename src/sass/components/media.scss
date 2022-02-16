@@ -50,7 +50,6 @@
                     background-color: #fff;
                     transition-duration: .25s;
                 }
-                
                 ul.header__menu {
                     display: block;
                     position: fixed;
@@ -65,7 +64,6 @@
                     background-color: #ECEFF1;
                     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
                     transition-duration: .25s;
-                    
                     .header__menu-item {
                         display: flex;
                         flex-direction: column;
@@ -77,7 +75,6 @@
                         transition-duration: .25s;
                         margin-right: 0px;
                         }
-                
                     .header__menu-item:hover {
                         background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
                         width: 100%;
