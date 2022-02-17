@@ -1,0 +1,99 @@
+@import "./components/mixins.scss";
+@import "./components/variables.scss";
+
+.process { 
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &__left {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+    &__left {
+        max-width: 503px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        &-title {
+            @include secondheadline;
+            color:$c-first-text;
+            margin-bottom: 7px;
+        }
+        &-descr {
+            @include subheading;
+            color:$c-second-text;
+            margin-bottom: 7px;
+            padding: 29px 10px;
+        }
+        &-btns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        &-btn {
+            @include button;
+            color: $c-primary;
+            border: 1px solid #30D7BA;
+            box-sizing: border-box;
+            /* shadow */
+            box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+            border-radius: 39px;
+            padding: 18px 46px;
+            &:last-child {
+                margin-left: 22px;
+            }
+            &:hover {
+                background: $c-secondary;
+                color:$c-light-text;
+            }
+        }
+    
+    }
+}
+.process__media-btns {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .process {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            max-width: 355px;
+        }
+        &__left{
+            &-info {
+                display: flex;
+                flex-direction: column;
+            }
+            &-btns {
+                display: none;
+            }
+            
+            &-btn {
+                padding: 8px 97px;
+                &:last-child {
+                    margin-left: 0;
+                    padding: 8px 106px;
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+    .process__media-btns {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 163px;
+    }
+}
