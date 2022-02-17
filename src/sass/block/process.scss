@@ -1,12 +1,12 @@
 @import "./components/mixins.scss";
 @import "./components/variables.scss";
 
-.process { 
+.process,.solutions { 
     &__content {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        flex-wrap: wrap;
+        
     }
     &__left {
         max-width: 503px;
@@ -47,10 +47,9 @@
                 color:$c-light-text;
             }
         }
-    
     }
 }
-.process__media-btns {
+.process__media-btns,.solutions__media-btns {
     display: none;
 }
 
@@ -105,7 +104,10 @@
 
 
 @media (max-width:600px) {
-    .process {
+    .solutions {
+        margin-bottom: 159px;
+    }
+    .process,.solutions {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -133,7 +135,24 @@
             }
         }
     }
-    .process__media-btns {
+    .solutions__media-btn {
+        @include button;
+        color: $c-primary;
+        border: 1px solid #30D7BA;
+        box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+        border-radius: 39px;
+        padding: 30px 85px;
+        margin-bottom: 13px;
+        &:hover {
+            background: $c-secondary;
+            color:$c-light-text;
+        }    
+    }
+
+    .soluions-img {
+        margin-bottom:59px;
+    }
+    .process__media-btns,.solutions__media-btns {
         display: flex;
         flex-direction: column;
         text-align: center;
