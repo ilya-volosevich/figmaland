@@ -1,0 +1,69 @@
+@import "./components/mixins.scss";
+@import "./components/variables.scss";
+
+.hero {
+    background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-items: center;
+    text-align: center;
+    padding-top:237px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        &-top {
+            margin-bottom: 61px;
+            max-width: 651px;
+            .hero__top-title {
+                @include headline;
+                margin-bottom: 7px;  
+            }
+            .hero__top-descr {
+                @include subheading;
+                margin-bottom: 61px;
+            }
+            .regular__btn{
+                @include regular__btn
+            }
+            .regular__btn:last-child {
+                margin-right: 0px;
+            }
+            .regular__btn:hover {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+                border-radius: 39px;
+                color: #000000;
+            }
+            
+        }
+    }
+}
+
+@media (max-width:600px) {
+    
+    //hero
+    .hero {
+        &__content {
+            &-top {
+                .hero__top-title {
+                    @include secondheadline
+                }
+                .hero__top-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .hero__top-button {
+                        margin-right: 0px;
+                    }
+                    .hero__top-button:first-child {
+                        margin-bottom: 13px; 
+                    }
+                }
+            }
+        }
+    }
+}
