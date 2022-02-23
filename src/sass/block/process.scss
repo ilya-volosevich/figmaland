@@ -1,217 +1,135 @@
 @import "./components/mixins.scss";
 @import "./components/variables.scss";
 
-.process,.solutions { 
+
+.process,.solutions {
+    
     &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        
-    }
-    &__left {
-        max-width: 503px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-areas: 
+        "title img"
+        "descr img"
+        "buttons img";
+        margin-bottom: 153px;   
         &-title {
+            grid-area: title;
+            align-self: flex-end;
             @include secondheadline;
             color:$c-first-text;
-            margin-bottom: 7px;
-        }
-        &-descr {
-            @include subheading;
-            color:$c-second-text;
-            margin-bottom: 7px;
-            padding: 29px 10px;
-        }
-        &-btns {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            padding: 0px 10px;
             
         }
-        &-btn {
+        &-descr {
+            grid-area: descr;
+            align-self: center;
+            @include subheading;
+            color:$c-second-text;
+            padding: 0px 10px;
+            max-width: 505px;
+            
+        }
+        &-buttons {
+            grid-area: buttons;
+            align-self: flex-start;   
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: row
+        }
+        &-button {
             @include button;
-            color: $c-primary;
-            border: 1px solid #30D7BA;
-            box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-            border-radius: 39px;
+            color:$c-primary;
+            margin-right: 22px;
             padding: 18px 46px;
-            &:last-child {
-                margin-left: 22px;
-            }
-            &:hover {
-                background: $c-secondary;
-                color:$c-light-text;
-            }
+            border: 1px solid #30D7BA;
+            border-radius: 39px;    
+        }
+        &-button:hover {
+            background: $c-secondary;
+            color: $c-light-text;
+        }
+        &-img {
+            grid-area: img;
         }
     }
-}
-.process__media-btns,.solutions__media-btns {
-    display: none;
 }
 
 .operations {
     &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    &__right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &-info {
-            max-width: 544px;
-        }
-        &-title {
-            @include secondheadline;
-            color:$c-first-text;
-            margin-bottom: 7px;
-        }
-        &-descr {
-            @include subheading;
-            color:$c-second-text;
-            margin-bottom: 7px;
-            padding: 30px 10px;
-            max-width: 503px;
-        }
-        &-btns {
+        &-buttons {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            justify-content: flex-start;
         }
-        &-btn {
+        display: grid;
+        align-items: center;
+        margin-bottom: 153px;
+        grid-template-areas: 
+        "img title"
+        "img descr"
+        "img buttons" ;
+        &-title {
+            grid-area: title;
+            align-self: flex-end;
+            @include secondheadline;
+            color:$c-first-text;
+            padding: 0px 10px;
+            
+        }
+        &-descr {
+            grid-area: descr;
+            align-self: center;
+            @include subheading;
+            color:$c-second-text;
+            padding: 0px 10px;
+            max-width: 505px;
+            
+        }
+        &-buttons {
+            grid-area: buttons;
+            align-self: flex-start;   
+            padding: 0px 10px;
+        }
+        &-button {
             @include button;
-            color: $c-primary;
-            border: 1px solid #30D7BA;
-            box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-            border-radius: 39px;
+            color:$c-primary;
+            margin-right: 22px;
             padding: 18px 46px;
-            &:hover {
-                background: $c-secondary;
-                color:$c-light-text;
-            }
+            border: 1px solid #30D7BA;
+            border-radius: 39px;
+        }
+        &-button:hover {
+            background: $c-secondary;
+            color: $c-light-text;
+        }
+        &-img {
+            grid-area: img;
         }
     }
 }
-
-.operations__media-btns {
-    display: none;
-}
-
 
 @media (max-width:600px) {
-    .solutions {
-        margin-bottom: 109px;
-    }
-    .process,.solutions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .process,.solutions,.operations {
         &__content {
-            display: flex;
-            flex-direction: column;
-            max-width: 355px;
-        }
-        &__left{
-            &-info {
+            display: grid;
+            align-items: center;
+            grid-template-areas: 
+            "title"
+            "descr"
+            "img"
+            "buttons";
+            &-buttons {
                 display: flex;
                 flex-direction: column;
-            }
-            &-btns {
-                display: none;
-            }
-            
-            &-btn {
-                padding: 8px 97px;
-                &:last-child {
-                    margin-left: 0;
-                    padding: 8px 106px;
-                    margin-top: 22px;
-                }
-            }
-        }
-    }
-    .solutions__media-btn {
-        @include button;
-        color: $c-primary;
-        border: 1px solid #30D7BA;
-        box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-        border-radius: 39px;
-        padding: 20px 75px;
-        margin-bottom: 13px;
-        &:hover {
-            background: $c-secondary;
-            color:$c-light-text;
-        }    
-    }
+                text-align: center;
 
-    .soluions-img {
-        margin-bottom:59px;
-    }
-    .process__media-btns,.solutions__media-btns {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 163px;
-    }
-    .solutions__media-btns {
-        margin-bottom: 0px;
-    }
-    .operations {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__content {
-            display: flex;
-            flex-direction: column;
-            max-width: 355px;
-        }
-        &__img {
-            order: 2;
-        }
-        &__right{
-            order:1;
-            &-info {
-                display: flex;
-                flex-direction: column;
             }
-            &-btns {
-                display: none;
+            &-button {
+                margin-right: 0px;
+                margin-bottom: 22px;
             }
-            
-            &-btn {
-                padding: 18px 97px;
-                &:last-child {
-                    margin-left: 0;
-                    padding: 8px 106px;
-                    margin-top: 22px;
-                }
+            &-button:last-child {
+                
             }
         }
     }
-    .operations__media-btns {
-        order: 3;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        margin-bottom: 163px;
-    }
-    .operations__media-btn {
-        @include button;
-            color: $c-primary;
-            border: 1px solid #30D7BA;
-            box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-            border-radius: 39px;
-            padding: 18px 46px;
-            &:hover {
-                background: $c-secondary;
-                color:$c-light-text;
-            }
-    }
-    
 }
