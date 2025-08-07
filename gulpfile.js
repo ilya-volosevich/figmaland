@@ -15,7 +15,12 @@ const server = () => {
     browserSync.init({
         server: {
             baseDir: path.root
-        }
+        },
+        host: '0.0.0.0',
+        port: 3000,
+        open: false,
+        notify: false,
+        ui: false
     })
 }
 
@@ -37,7 +42,11 @@ exports.dev = series(clear,
     parallel(pug, scss, img),
     parallel(watcher, server));
 
-exports.build = series(clear,
-        parallel(pug, scss, img),
-        );
+exports.build = series(
+    clear,
+    parallel(pug, scss, img)
+);
+
+// По умолчанию запускаем dev
+exports.default = exports.dev;
 
